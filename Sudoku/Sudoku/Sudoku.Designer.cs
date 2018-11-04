@@ -325,6 +325,7 @@
             this.tlpPlayZone.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpPlayZone.Size = new System.Drawing.Size(376, 385);
             this.tlpPlayZone.TabIndex = 2;
+            this.tlpPlayZone.Paint += new System.Windows.Forms.PaintEventHandler(this.tlpPlayZone_Paint_1);
             // 
             // textBox81
             // 

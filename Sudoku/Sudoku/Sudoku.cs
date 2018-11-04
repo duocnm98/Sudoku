@@ -24,10 +24,6 @@ namespace Sudoku
             Connect();
         }
 
-        private void Panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         #region .Variables
         int[,] _Matrix = new int[9,9];
@@ -91,9 +87,10 @@ namespace Sudoku
         {
             int lv = 3;
 
+            if (cbbLevel.Text == "Easy")
+                lv = 3;
             if (cbbLevel.Text == "Medium")
                 lv = 5;
-       
             if (cbbLevel.Text == "Hard") 
                 lv = 7;
 
@@ -254,13 +251,7 @@ namespace Sudoku
 
         #endregion
 
-        private void panelPlayZone_Paint(object sender, PaintEventArgs e)
-        {
-            e.Graphics.DrawLine(new Pen(Color.Black, 2), 130 , 0, 130, 400);
-            e.Graphics.DrawLine(new Pen(Color.Black, 2), 252, 0, 252, 400);
-            e.Graphics.DrawLine(new Pen(Color.Black, 2), 0, 127, 400, 127);
-            e.Graphics.DrawLine(new Pen(Color.Black, 2), 0, 254, 400, 255);
-        }
+      
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
@@ -285,6 +276,12 @@ namespace Sudoku
             }
         }
 
-
+        private void tlpPlayZone_Paint_1(object sender, PaintEventArgs e)
+        {
+            e.Graphics.DrawLine(new Pen(Color.Black, 2), 120, 0, 120, 400);
+            e.Graphics.DrawLine(new Pen(Color.Black, 2), 245, 0, 245, 400);
+            e.Graphics.DrawLine(new Pen(Color.Black, 2), 0, 127, 400, 127);
+            e.Graphics.DrawLine(new Pen(Color.Black, 2), 0, 250, 400, 250);
+        }
     }
 }
