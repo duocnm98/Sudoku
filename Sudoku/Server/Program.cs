@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sudoku
+namespace Server
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Sudoku
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sudoku());
+            Application.Run(new Server());
         }
     }
 }
